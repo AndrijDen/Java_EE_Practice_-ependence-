@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="helloWorld" class="com.tutorialspoint.HelloWorld">
+		<property name="message" value="Hello World!" />
+	</bean>
+
+	<bean id="student1" class="com.tutorialspoint.Student">
+		<constructor-arg value="12" />
+	</bean>
+
+	<bean id="teachers" class="com.tutorialspoint.Teacher">
+	 <property name="name">
+				<list>
+				 <ref bean="Petro Petrovich" />
+				<ref bean="Ivan Ivanov" /> 
+			</list>
+		</property>
+</bean>
+	
+
+
+</beans>
